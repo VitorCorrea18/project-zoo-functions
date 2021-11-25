@@ -15,9 +15,9 @@ function calculateEntry(entrants) {
   // seu código aqui
   if (entrants === undefined || Object.keys(entrants).length === 0) return 0;
   const entrantsForAge = countEntrants(entrants);
-  const childTotal = entrantsForAge.child * 20.99;
-  const adultTotal = entrantsForAge.adult * 49.99;
-  const seniorTotal = entrantsForAge.senior * 24.99;
+  const childTotal = entrantsForAge.child * data.prices.child;
+  const adultTotal = entrantsForAge.adult * data.prices.adult;
+  const seniorTotal = entrantsForAge.senior * data.prices.senior;
   return childTotal + adultTotal + seniorTotal;
 }
 
